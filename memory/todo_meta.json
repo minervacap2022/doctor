@@ -1,0 +1,27 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "修复精力(Energy)初始值错误的严重bug",
+        "details": "检查重启游戏时精力值从100开始而不是55的问题，定位并修复相关代码",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "完善游戏介绍文案",
+        "details": "1. 任意值归零结束游戏 2. 添加隐藏评分机制说明（决策影响隐藏分，累积会触发结束） 3. 时间惩罚机制说明（每秒随机减3分）",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "3": {
+        "id": "3",
+        "content": "重新设计种子复盘功能",
+        "details": "1. 在游戏结束界面添加种子复盘入口 2. 添加种子功能的说明文案 3. 优化用户体验流程",
+        "status": "completed",
+        "priority": "medium"
+      }
+    }
+  }
+}

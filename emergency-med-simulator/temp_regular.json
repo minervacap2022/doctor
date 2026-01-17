@@ -1,0 +1,1265 @@
+[
+  {
+    "id": "ER_ChestPain_01",
+    "text": "中年男性突发胸痛，生命体征尚可。先做心电图还是先止痛？",
+    "character": "急诊值班医生",
+    "left": {
+      "label": "先做心电图",
+      "impact": {
+        "safety": 8,
+        "knowledge": 3,
+        "energy": -2,
+        "ethics": 1
+      }
+    },
+    "right": {
+      "label": "先止痛",
+      "impact": {
+        "safety": 3,
+        "knowledge": 1,
+        "energy": -1,
+        "ethics": 0
+      }
+    },
+    "timeCost": 2,
+    "category": "emergency",
+    "weight": 10
+  },
+  {
+    "id": "ER_Breathing_01",
+    "text": "老年女性呼吸困难，疑似急性肺水肿。家属要求立即输液。",
+    "character": "患者家属",
+    "left": {
+      "label": "先评估病情",
+      "impact": {
+        "safety": 10,
+        "knowledge": 5,
+        "energy": -3,
+        "ethics": 2
+      }
+    },
+    "right": {
+      "label": "按家属要求输液",
+      "impact": {
+        "safety": -5,
+        "knowledge": -2,
+        "energy": -1,
+        "ethics": -8
+      }
+    },
+    "timeCost": 2,
+    "category": "emergency",
+    "weight": 10
+  },
+  {
+    "id": "ER_Trauma_01",
+    "text": "车祸外伤患者，意识清楚但左腿明显变形。需要紧急处理。",
+    "character": "急诊护士",
+    "left": {
+      "label": "全身评估后处理",
+      "impact": {
+        "safety": 12,
+        "knowledge": 4,
+        "energy": -4,
+        "ethics": 3
+      }
+    },
+    "right": {
+      "label": "直接处理骨折",
+      "impact": {
+        "safety": 2,
+        "knowledge": 2,
+        "energy": -2,
+        "ethics": -1
+      }
+    },
+    "timeCost": 3,
+    "category": "emergency",
+    "weight": 10
+  },
+  {
+    "id": "ER_Allergy_01",
+    "text": "患者突发过敏反应，面部肿胀，呼吸急促。需要立即用药。",
+    "character": "急诊医生",
+    "left": {
+      "label": "立即肌注肾上腺素",
+      "impact": {
+        "safety": 15,
+        "knowledge": 8,
+        "energy": -5,
+        "ethics": 4
+      }
+    },
+    "right": {
+      "label": "先询问过敏史",
+      "impact": {
+        "safety": -8,
+        "knowledge": 3,
+        "energy": -2,
+        "ethics": 2
+      }
+    },
+    "timeCost": 1,
+    "category": "emergency",
+    "weight": 8
+  },
+  {
+    "id": "ER_Fever_01",
+    "text": "3岁幼儿高热39.5°C，家长非常焦急，要求立即退烧。",
+    "character": "患儿家长",
+    "left": {
+      "label": "详细检查后用药",
+      "impact": {
+        "safety": 8,
+        "knowledge": 6,
+        "energy": -3,
+        "ethics": 5
+      }
+    },
+    "right": {
+      "label": "立即退烧处理",
+      "impact": {
+        "safety": 3,
+        "knowledge": 1,
+        "energy": -1,
+        "ethics": -3
+      }
+    },
+    "timeCost": 2,
+    "category": "emergency",
+    "weight": 12
+  },
+  {
+    "id": "COMM_RedPacket_01",
+    "text": "家属偷偷塞给你一个红包，说'医生，拜托多关照'。",
+    "character": "患者家属",
+    "left": {
+      "label": "坚决拒收并记录",
+      "impact": {
+        "ethics": 12,
+        "safety": 2,
+        "energy": -3
+      }
+    },
+    "right": {
+      "label": "代为退回不记录",
+      "impact": {
+        "ethics": 4,
+        "energy": -1
+      }
+    },
+    "timeCost": 1,
+    "category": "communication",
+    "weight": 5
+  },
+  {
+    "id": "COMM_Complaint_01",
+    "text": "患者家属对等待时间不满，在病房大声抱怨，影响其他患者。",
+    "character": "患者家属",
+    "left": {
+      "label": "耐心解释并安抚",
+      "impact": {
+        "ethics": 8,
+        "energy": -5,
+        "knowledge": 2
+      }
+    },
+    "right": {
+      "label": "请保安处理",
+      "impact": {
+        "energy": -1,
+        "ethics": -2,
+        "safety": 1
+      }
+    },
+    "timeCost": 2,
+    "category": "communication",
+    "weight": 8
+  },
+  {
+    "id": "COMM_Language_01",
+    "text": "外籍患者不会说中文，病情描述不清，无家属陪同。",
+    "character": "外籍患者",
+    "left": {
+      "label": "找翻译软件协助",
+      "impact": {
+        "safety": 5,
+        "knowledge": 4,
+        "energy": -4,
+        "ethics": 6
+      }
+    },
+    "right": {
+      "label": "基础检查猜测病情",
+      "impact": {
+        "safety": -3,
+        "knowledge": 2,
+        "energy": -2,
+        "ethics": -1
+      }
+    },
+    "timeCost": 3,
+    "category": "communication",
+    "weight": 6
+  },
+  {
+    "id": "COMM_BadNews_01",
+    "text": "需要告知家属患者病情危重，可能需要ICU治疗。",
+    "character": "主治医生",
+    "left": {
+      "label": "详细说明病情和风险",
+      "impact": {
+        "ethics": 10,
+        "knowledge": 3,
+        "energy": -4,
+        "safety": 2
+      }
+    },
+    "right": {
+      "label": "简单告知避免恐慌",
+      "impact": {
+        "ethics": -5,
+        "energy": -1,
+        "safety": -2
+      }
+    },
+    "timeCost": 2,
+    "category": "communication",
+    "weight": 7
+  },
+  {
+    "id": "COMM_Insurance_01",
+    "text": "患者没有医保，担心费用问题，要求最便宜的治疗方案。",
+    "character": "患者",
+    "left": {
+      "label": "推荐必需检查和治疗",
+      "impact": {
+        "safety": 8,
+        "ethics": 8,
+        "energy": -2,
+        "knowledge": 3
+      }
+    },
+    "right": {
+      "label": "提供最低成本方案",
+      "impact": {
+        "safety": -5,
+        "ethics": -3,
+        "energy": -1,
+        "knowledge": 1
+      }
+    },
+    "timeCost": 2,
+    "category": "communication",
+    "weight": 9
+  },
+  {
+    "id": "ETHICS_Photo_01",
+    "text": "遇到罕见病例，想拍照作教学用途。患者意识模糊。",
+    "character": "你",
+    "left": {
+      "label": "征得家属同意并打码",
+      "impact": {
+        "ethics": 10,
+        "knowledge": 3,
+        "energy": -1
+      }
+    },
+    "right": {
+      "label": "偷偷拍摄",
+      "impact": {
+        "knowledge": 5,
+        "ethics": -15
+      }
+    },
+    "timeCost": 1,
+    "category": "ethics",
+    "weight": 6
+  },
+  {
+    "id": "ETHICS_Resource_01",
+    "text": "科室库存紧张，只剩一支昂贵药物，两个患者都需要。",
+    "character": "护士长",
+    "left": {
+      "label": "给病情更重的患者",
+      "impact": {
+        "ethics": 12,
+        "safety": 8,
+        "energy": -3,
+        "knowledge": 2
+      }
+    },
+    "right": {
+      "label": "给先到的患者",
+      "impact": {
+        "ethics": 3,
+        "safety": 2,
+        "energy": -1
+      }
+    },
+    "timeCost": 2,
+    "category": "ethics",
+    "weight": 7
+  },
+  {
+    "id": "ETHICS_Family_01",
+    "text": "患者家属要求隐瞒病情，不要告诉患者癌症诊断。",
+    "character": "患者家属",
+    "left": {
+      "label": "坚持告知患者真相",
+      "impact": {
+        "ethics": 10,
+        "safety": 3,
+        "energy": -4,
+        "knowledge": 2
+      }
+    },
+    "right": {
+      "label": "按家属要求隐瞒",
+      "impact": {
+        "ethics": -8,
+        "energy": -2,
+        "safety": -1
+      }
+    },
+    "timeCost": 2,
+    "category": "ethics",
+    "weight": 5
+  },
+  {
+    "id": "ETHICS_DNR_01",
+    "text": "末期患者家属要求不进行心肺复苏，患者本人未表态。",
+    "character": "患者家属",
+    "left": {
+      "label": "询问患者本人意愿",
+      "impact": {
+        "ethics": 12,
+        "safety": 5,
+        "energy": -3,
+        "knowledge": 4
+      }
+    },
+    "right": {
+      "label": "按家属意愿执行",
+      "impact": {
+        "ethics": -5,
+        "energy": -1,
+        "safety": -3
+      }
+    },
+    "timeCost": 2,
+    "category": "ethics",
+    "weight": 4
+  },
+  {
+    "id": "ETHICS_Minor_01",
+    "text": "16岁少女怀疑怀孕，要求检查但不要告知父母。",
+    "character": "患者",
+    "left": {
+      "label": "保护患者隐私",
+      "impact": {
+        "ethics": 8,
+        "safety": 3,
+        "energy": -2
+      }
+    },
+    "right": {
+      "label": "通知监护人",
+      "impact": {
+        "ethics": -3,
+        "safety": 1,
+        "energy": -1
+      }
+    },
+    "timeCost": 1,
+    "category": "ethics",
+    "weight": 6
+  },
+  {
+    "id": "EXAM_Question_01",
+    "text": "带教老师突然提问：'左心衰的典型症状是什么？'",
+    "character": "带教老师",
+    "left": {
+      "label": "呼吸困难、肺水肿",
+      "impact": {
+        "knowledge": 8,
+        "safety": 3
+      }
+    },
+    "right": {
+      "label": "胸痛、心律不齐",
+      "impact": {
+        "knowledge": -5,
+        "energy": -3
+      }
+    },
+    "timeCost": 1,
+    "category": "education",
+    "weight": 12
+  },
+  {
+    "id": "EXAM_Procedure_01",
+    "text": "第一次独立进行腰椎穿刺，带教老师在旁观察指导。",
+    "character": "带教老师",
+    "left": {
+      "label": "仔细按步骤操作",
+      "impact": {
+        "knowledge": 10,
+        "safety": 8,
+        "energy": -4,
+        "ethics": 3
+      }
+    },
+    "right": {
+      "label": "请老师直接示范",
+      "impact": {
+        "knowledge": 3,
+        "safety": 5,
+        "energy": -1,
+        "ethics": 1
+      }
+    },
+    "timeCost": 3,
+    "category": "education",
+    "weight": 8
+  },
+  {
+    "id": "EXAM_ECG_01",
+    "text": "心电图显示异常波形，但你不确定具体诊断。",
+    "character": "主治医生",
+    "left": {
+      "label": "承认不确定请教上级",
+      "impact": {
+        "knowledge": 5,
+        "safety": 8,
+        "ethics": 6,
+        "energy": -2
+      }
+    },
+    "right": {
+      "label": "凭经验给出诊断",
+      "impact": {
+        "knowledge": -3,
+        "safety": -8,
+        "energy": -3,
+        "ethics": -5
+      }
+    },
+    "timeCost": 2,
+    "category": "education",
+    "weight": 10
+  },
+  {
+    "id": "EXAM_Medicine_01",
+    "text": "护士问你某药物的用法用量，你不太确定。",
+    "character": "护士",
+    "left": {
+      "label": "查阅药典确认",
+      "impact": {
+        "knowledge": 8,
+        "safety": 10,
+        "energy": -3,
+        "ethics": 5
+      }
+    },
+    "right": {
+      "label": "凭印象回答",
+      "impact": {
+        "knowledge": -2,
+        "safety": -10,
+        "energy": -1,
+        "ethics": -3
+      }
+    },
+    "timeCost": 2,
+    "category": "education",
+    "weight": 11
+  },
+  {
+    "id": "EXAM_Case_01",
+    "text": "科室晨会病例讨论，主任点名要你分析这个疑难病例。",
+    "character": "科室主任",
+    "left": {
+      "label": "认真分析病史体征",
+      "impact": {
+        "knowledge": 12,
+        "energy": -4,
+        "ethics": 3
+      }
+    },
+    "right": {
+      "label": "简单回答推测诊断",
+      "impact": {
+        "knowledge": 2,
+        "energy": -2,
+        "ethics": -1
+      }
+    },
+    "timeCost": 2,
+    "category": "education",
+    "weight": 9
+  },
+  {
+    "id": "DEPT_Overtime_01",
+    "text": "夜班快结束时来了急诊，下班同事已走。是否主动留下？",
+    "character": "夜班护士",
+    "left": {
+      "label": "主动留下处理",
+      "impact": {
+        "safety": 8,
+        "ethics": 5,
+        "energy": -8
+      }
+    },
+    "right": {
+      "label": "交给下一班",
+      "impact": {
+        "energy": 2,
+        "ethics": -3
+      }
+    },
+    "timeCost": 3,
+    "category": "department",
+    "weight": 10
+  },
+  {
+    "id": "DEPT_Conflict_01",
+    "text": "护士和医生对治疗方案有分歧，现场气氛紧张。",
+    "character": "护士长",
+    "left": {
+      "label": "积极协调沟通",
+      "impact": {
+        "ethics": 8,
+        "energy": -3,
+        "safety": 3,
+        "knowledge": 2
+      }
+    },
+    "right": {
+      "label": "避免卷入冲突",
+      "impact": {
+        "energy": 1,
+        "ethics": -2,
+        "safety": -1
+      }
+    },
+    "timeCost": 2,
+    "category": "department",
+    "weight": 8
+  },
+  {
+    "id": "DEPT_Resource_01",
+    "text": "科室人手不足，你已连续工作12小时，但还有患者等待。",
+    "character": "值班主任",
+    "left": {
+      "label": "坚持完成工作",
+      "impact": {
+        "safety": 6,
+        "ethics": 8,
+        "energy": -12
+      }
+    },
+    "right": {
+      "label": "申请增援支持",
+      "impact": {
+        "safety": 8,
+        "energy": -2,
+        "ethics": 3,
+        "knowledge": 1
+      }
+    },
+    "timeCost": 1,
+    "category": "department",
+    "weight": 9
+  },
+  {
+    "id": "DEPT_Student_01",
+    "text": "规培医生犯了小错误，是否向上级汇报？",
+    "character": "规培医生",
+    "left": {
+      "label": "私下指导不汇报",
+      "impact": {
+        "ethics": 5,
+        "knowledge": 3,
+        "energy": -2
+      }
+    },
+    "right": {
+      "label": "如实向上级汇报",
+      "impact": {
+        "ethics": 8,
+        "safety": 5,
+        "energy": -1
+      }
+    },
+    "timeCost": 1,
+    "category": "department",
+    "weight": 7
+  },
+  {
+    "id": "DEPT_Equipment_01",
+    "text": "重要医疗设备出现故障，需要紧急维修，但影响正常工作。",
+    "character": "设备科",
+    "left": {
+      "label": "立即停机维修",
+      "impact": {
+        "safety": 10,
+        "ethics": 6,
+        "energy": -5
+      }
+    },
+    "right": {
+      "label": "先凑合使用",
+      "impact": {
+        "safety": -8,
+        "energy": -2,
+        "ethics": -3
+      }
+    },
+    "timeCost": 2,
+    "category": "department",
+    "weight": 6
+  },
+  {
+    "id": "PH_Outbreak_01",
+    "text": "发现3例相似发热症状，疑似聚集性疫情。是否上报？",
+    "character": "科室主任",
+    "left": {
+      "label": "立即上报",
+      "impact": {
+        "safety": 12,
+        "ethics": 8,
+        "energy": -5
+      }
+    },
+    "right": {
+      "label": "观察再说",
+      "impact": {
+        "energy": 1,
+        "safety": -8
+      }
+    },
+    "timeCost": 2,
+    "category": "public_health",
+    "weight": 6
+  },
+  {
+    "id": "PH_Isolation_01",
+    "text": "患者拒绝隔离观察，坚持要回家，可能存在传染风险。",
+    "character": "患者",
+    "left": {
+      "label": "说服患者配合隔离",
+      "impact": {
+        "safety": 10,
+        "ethics": 6,
+        "energy": -4,
+        "knowledge": 3
+      }
+    },
+    "right": {
+      "label": "让患者自行离开",
+      "impact": {
+        "safety": -12,
+        "ethics": -8,
+        "energy": 1
+      }
+    },
+    "timeCost": 2,
+    "category": "public_health",
+    "weight": 5
+  },
+  {
+    "id": "PH_Vaccine_01",
+    "text": "家长拒绝给孩子接种疫苗，担心副作用。",
+    "character": "患儿家长",
+    "left": {
+      "label": "详细解释疫苗重要性",
+      "impact": {
+        "safety": 8,
+        "knowledge": 5,
+        "ethics": 6,
+        "energy": -3
+      }
+    },
+    "right": {
+      "label": "尊重家长选择",
+      "impact": {
+        "safety": -3,
+        "ethics": 2,
+        "energy": -1
+      }
+    },
+    "timeCost": 2,
+    "category": "public_health",
+    "weight": 7
+  },
+  {
+    "id": "PH_Report_01",
+    "text": "发现食物中毒患者，需要了解就餐地点进行流行病学调查。",
+    "character": "疾控中心",
+    "left": {
+      "label": "积极配合调查",
+      "impact": {
+        "safety": 8,
+        "ethics": 8,
+        "knowledge": 4,
+        "energy": -3
+      }
+    },
+    "right": {
+      "label": "只治疗不参与调查",
+      "impact": {
+        "safety": -2,
+        "ethics": -3,
+        "energy": 1
+      }
+    },
+    "timeCost": 2,
+    "category": "public_health",
+    "weight": 6
+  },
+  {
+    "id": "PH_Emergency_01",
+    "text": "突发公共卫生事件，需要紧急动员，你刚下夜班很疲劳。",
+    "character": "应急指挥中心",
+    "left": {
+      "label": "立即响应参与",
+      "impact": {
+        "safety": 10,
+        "ethics": 10,
+        "energy": -10
+      }
+    },
+    "right": {
+      "label": "说明情况申请休息",
+      "impact": {
+        "safety": -2,
+        "ethics": -2,
+        "energy": 3
+      }
+    },
+    "timeCost": 1,
+    "category": "public_health",
+    "weight": 4
+  },
+  {
+    "id": "ER_Stroke_01",
+    "text": "老年患者突发言语不清，怀疑脑卒中。家属要求转院到大医院。",
+    "character": "患者家属",
+    "left": {
+      "label": "立即启动卒中绿色通道",
+      "impact": {
+        "safety": 15,
+        "knowledge": 8,
+        "energy": -6,
+        "ethics": 5
+      }
+    },
+    "right": {
+      "label": "联系转院",
+      "impact": {
+        "safety": -5,
+        "knowledge": 2,
+        "energy": -2,
+        "ethics": -3
+      }
+    },
+    "timeCost": 3,
+    "category": "emergency",
+    "weight": 8
+  },
+  {
+    "id": "ER_Pregnancy_01",
+    "text": "孕妇腹痛，胎心监护异常。需要紧急处理但产科医生还未到达。",
+    "character": "值班护士",
+    "left": {
+      "label": "先行紧急处理",
+      "impact": {
+        "safety": 10,
+        "knowledge": 5,
+        "energy": -4,
+        "ethics": 3
+      }
+    },
+    "right": {
+      "label": "等待产科医生",
+      "impact": {
+        "safety": -8,
+        "knowledge": 2,
+        "energy": -1,
+        "ethics": 1
+      }
+    },
+    "timeCost": 2,
+    "category": "emergency",
+    "weight": 7
+  },
+  {
+    "id": "ER_Pediatric_01",
+    "text": "婴儿高热惊厥，父母情绪激动，现场混乱。",
+    "character": "患儿父母",
+    "left": {
+      "label": "先安抚家长再处理",
+      "impact": {
+        "safety": 8,
+        "ethics": 8,
+        "energy": -5,
+        "knowledge": 3
+      }
+    },
+    "right": {
+      "label": "直接处理患儿",
+      "impact": {
+        "safety": 12,
+        "knowledge": 5,
+        "energy": -3,
+        "ethics": 2
+      }
+    },
+    "timeCost": 2,
+    "category": "emergency",
+    "weight": 9
+  },
+  {
+    "id": "ER_Poisoning_01",
+    "text": "怀疑农药中毒患者，但具体毒物不明，需要选择解毒方案。",
+    "character": "急诊医生",
+    "left": {
+      "label": "使用广谱解毒剂",
+      "impact": {
+        "safety": 10,
+        "knowledge": 8,
+        "energy": -4,
+        "ethics": 4
+      }
+    },
+    "right": {
+      "label": "等待毒物检测结果",
+      "impact": {
+        "safety": -5,
+        "knowledge": 5,
+        "energy": -2,
+        "ethics": 2
+      }
+    },
+    "timeCost": 2,
+    "category": "emergency",
+    "weight": 6
+  },
+  {
+    "id": "ER_Psychiatry_01",
+    "text": "精神疾病患者拒绝治疗，有自伤倾向，家属要求强制医疗。",
+    "character": "患者家属",
+    "left": {
+      "label": "申请精神科会诊",
+      "impact": {
+        "safety": 12,
+        "ethics": 10,
+        "energy": -4,
+        "knowledge": 5
+      }
+    },
+    "right": {
+      "label": "按家属要求处理",
+      "impact": {
+        "safety": 3,
+        "ethics": -8,
+        "energy": -2,
+        "knowledge": 1
+      }
+    },
+    "timeCost": 3,
+    "category": "emergency",
+    "weight": 5
+  },
+  {
+    "id": "COMM_VIP_01",
+    "text": "当地官员因小病来急诊，要求优先处理，但前面还有重病患者。",
+    "character": "医院领导",
+    "left": {
+      "label": "按医疗优先级处理",
+      "impact": {
+        "ethics": 15,
+        "safety": 5,
+        "energy": -8,
+        "knowledge": 2
+      }
+    },
+    "right": {
+      "label": "优先处理官员",
+      "impact": {
+        "ethics": -12,
+        "safety": -2,
+        "energy": -3,
+        "knowledge": 1
+      }
+    },
+    "timeCost": 2,
+    "category": "communication",
+    "weight": 4
+  },
+  {
+    "id": "COMM_Media_01",
+    "text": "记者来院采访医疗事故，科主任要求你配合采访。",
+    "character": "科主任",
+    "left": {
+      "label": "如实接受采访",
+      "impact": {
+        "ethics": 10,
+        "safety": 3,
+        "energy": -5,
+        "knowledge": 2
+      }
+    },
+    "right": {
+      "label": "拒绝采访",
+      "impact": {
+        "ethics": 3,
+        "safety": 1,
+        "energy": -1,
+        "knowledge": 1
+      }
+    },
+    "timeCost": 2,
+    "category": "communication",
+    "weight": 4
+  },
+  {
+    "id": "COMM_Interpreter_01",
+    "text": "聋哑患者就诊，无手语翻译，家属也不在场。",
+    "character": "聋哑患者",
+    "left": {
+      "label": "学习简单手语沟通",
+      "impact": {
+        "ethics": 12,
+        "knowledge": 8,
+        "energy": -6,
+        "safety": 5
+      }
+    },
+    "right": {
+      "label": "通过文字和比划沟通",
+      "impact": {
+        "ethics": 5,
+        "knowledge": 3,
+        "energy": -3,
+        "safety": 2
+      }
+    },
+    "timeCost": 3,
+    "category": "communication",
+    "weight": 6
+  },
+  {
+    "id": "COMM_Social_01",
+    "text": "社会底层患者衣着破旧，其他患者和家属表现出歧视态度。",
+    "character": "其他患者家属",
+    "left": {
+      "label": "制止歧视维护患者尊严",
+      "impact": {
+        "ethics": 15,
+        "safety": 3,
+        "energy": -5,
+        "knowledge": 2
+      }
+    },
+    "right": {
+      "label": "默默治疗不参与",
+      "impact": {
+        "ethics": -2,
+        "safety": 2,
+        "energy": -1,
+        "knowledge": 1
+      }
+    },
+    "timeCost": 2,
+    "category": "communication",
+    "weight": 7
+  },
+  {
+    "id": "COMM_Death_01",
+    "text": "需要通知家属患者死亡消息，家属在外地需要时间赶来。",
+    "character": "你",
+    "left": {
+      "label": "电话告知并安排接待",
+      "impact": {
+        "ethics": 10,
+        "safety": 2,
+        "energy": -4,
+        "knowledge": 3
+      }
+    },
+    "right": {
+      "label": "等家属到达再告知",
+      "impact": {
+        "ethics": 5,
+        "safety": 1,
+        "energy": -2,
+        "knowledge": 1
+      }
+    },
+    "timeCost": 1,
+    "category": "communication",
+    "weight": 6
+  },
+  {
+    "id": "ETHICS_Transplant_01",
+    "text": "器官移植候选者，但患者有吸毒史，是否影响移植资格？",
+    "character": "移植协调员",
+    "left": {
+      "label": "客观评估不带偏见",
+      "impact": {
+        "ethics": 15,
+        "safety": 5,
+        "knowledge": 8,
+        "energy": -4
+      }
+    },
+    "right": {
+      "label": "考虑社会道德因素",
+      "impact": {
+        "ethics": -8,
+        "safety": 2,
+        "knowledge": 3,
+        "energy": -2
+      }
+    },
+    "timeCost": 2,
+    "category": "ethics",
+    "weight": 3
+  },
+  {
+    "id": "ETHICS_Research_01",
+    "text": "制药公司要求参与新药临床试验，提供丰厚报酬。",
+    "character": "制药公司代表",
+    "left": {
+      "label": "严格按伦理规范参与",
+      "impact": {
+        "ethics": 12,
+        "knowledge": 10,
+        "energy": -3,
+        "safety": 5
+      }
+    },
+    "right": {
+      "label": "为了科研适当放宽",
+      "impact": {
+        "ethics": -10,
+        "knowledge": 8,
+        "safety": -5,
+        "energy": -2
+      }
+    },
+    "timeCost": 2,
+    "category": "ethics",
+    "weight": 4
+  },
+  {
+    "id": "ETHICS_Suicide_01",
+    "text": "自杀未遂患者清醒后拒绝治疗，坚持要求出院。",
+    "character": "患者",
+    "left": {
+      "label": "启动精神科会诊程序",
+      "impact": {
+        "ethics": 12,
+        "safety": 15,
+        "energy": -5,
+        "knowledge": 5
+      }
+    },
+    "right": {
+      "label": "尊重患者自主权",
+      "impact": {
+        "ethics": -5,
+        "safety": -10,
+        "energy": -2,
+        "knowledge": 2
+      }
+    },
+    "timeCost": 2,
+    "category": "ethics",
+    "weight": 4
+  },
+  {
+    "id": "ETHICS_Abortion_01",
+    "text": "未成年女孩要求终止妊娠，父母强烈反对。",
+    "character": "患者和家属",
+    "left": {
+      "label": "详细了解各方意见",
+      "impact": {
+        "ethics": 10,
+        "safety": 5,
+        "energy": -6,
+        "knowledge": 5
+      }
+    },
+    "right": {
+      "label": "按法律规定处理",
+      "impact": {
+        "ethics": 8,
+        "safety": 8,
+        "energy": -3,
+        "knowledge": 3
+      }
+    },
+    "timeCost": 3,
+    "category": "ethics",
+    "weight": 3
+  },
+  {
+    "id": "ETHICS_Elderly_01",
+    "text": "高龄患者家属要求放弃积极治疗，但患者本人意志坚强。",
+    "character": "患者和家属",
+    "left": {
+      "label": "尊重患者本人意愿",
+      "impact": {
+        "ethics": 15,
+        "safety": 8,
+        "energy": -4,
+        "knowledge": 4
+      }
+    },
+    "right": {
+      "label": "考虑家属经济负担",
+      "impact": {
+        "ethics": -5,
+        "safety": 3,
+        "energy": -2,
+        "knowledge": 2
+      }
+    },
+    "timeCost": 3,
+    "category": "ethics",
+    "weight": 5
+  },
+  {
+    "id": "EXAM_Simulation_01",
+    "text": "技能考试中，模拟患者表现不配合，影响你的操作。",
+    "character": "模拟患者",
+    "left": {
+      "label": "先安抚再继续操作",
+      "impact": {
+        "knowledge": 8,
+        "ethics": 5,
+        "energy": -3,
+        "safety": 3
+      }
+    },
+    "right": {
+      "label": "按标准流程继续",
+      "impact": {
+        "knowledge": 5,
+        "safety": 5,
+        "energy": -2,
+        "ethics": 2
+      }
+    },
+    "timeCost": 2,
+    "category": "education",
+    "weight": 10
+  },
+  {
+    "id": "EXAM_Mistake_01",
+    "text": "实习期间犯了错误，导师询问是否需要补习基础知识。",
+    "character": "导师",
+    "left": {
+      "label": "主动申请额外学习",
+      "impact": {
+        "knowledge": 12,
+        "ethics": 8,
+        "energy": -6,
+        "safety": 5
+      }
+    },
+    "right": {
+      "label": "表示已经掌握",
+      "impact": {
+        "knowledge": -3,
+        "safety": -2,
+        "energy": -1,
+        "ethics": -2
+      }
+    },
+    "timeCost": 1,
+    "category": "education",
+    "weight": 11
+  },
+  {
+    "id": "EXAM_Emergency_01",
+    "text": "考试中遇到真实急救情况，是否放弃考试参与救治？",
+    "character": "考官",
+    "left": {
+      "label": "立即参与救治",
+      "impact": {
+        "safety": 15,
+        "ethics": 12,
+        "knowledge": 5,
+        "energy": -5
+      }
+    },
+    "right": {
+      "label": "继续完成考试",
+      "impact": {
+        "knowledge": 5,
+        "safety": -5,
+        "ethics": -8,
+        "energy": -2
+      }
+    },
+    "timeCost": 3,
+    "category": "education",
+    "weight": 5
+  },
+  {
+    "id": "EXAM_Cheat_01",
+    "text": "考试中发现同学作弊，是否向监考老师报告？",
+    "character": "你",
+    "left": {
+      "label": "维护考试公正性",
+      "impact": {
+        "ethics": 12,
+        "knowledge": 3,
+        "energy": -3,
+        "safety": 2
+      }
+    },
+    "right": {
+      "label": "私下提醒同学",
+      "impact": {
+        "ethics": 5,
+        "knowledge": 1,
+        "energy": -1,
+        "safety": 1
+      }
+    },
+    "timeCost": 1,
+    "category": "education",
+    "weight": 8
+  },
+  {
+    "id": "EXAM_Innovation_01",
+    "text": "你提出了改进治疗方案的想法，但与教科书不符。",
+    "character": "带教老师",
+    "left": {
+      "label": "坚持创新思维",
+      "impact": {
+        "knowledge": 10,
+        "ethics": 5,
+        "energy": -3,
+        "safety": 3
+      }
+    },
+    "right": {
+      "label": "遵循标准方案",
+      "impact": {
+        "knowledge": 3,
+        "safety": 8,
+        "energy": -1,
+        "ethics": 3
+      }
+    },
+    "timeCost": 2,
+    "category": "education",
+    "weight": 7
+  }
+]

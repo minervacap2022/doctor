@@ -1,0 +1,238 @@
+{
+  "endings": [
+    {
+      "id": "perfect_doctor",
+      "name": "仁心医者",
+      "description": "你用仁心守护生命，是患者心中的白衣天使。在你的心中，每一个生命都童重若山。",
+      "condition": {
+        "multiResourceCondition": {
+          "safety": {"min": 70},
+          "ethics": {"min": 70}
+        }
+      },
+      "type": "positive"
+    },
+    {
+      "id": "academic_star",
+      "name": "学术新星",
+      "description": "你在医学道路上不断钻研，未来可期。你的知识和研究将改变更多患者的命运。",
+      "condition": {
+        "multiResourceCondition": {
+          "knowledge": {"min": 80},
+          "safety": {"min": 40, "max": 80},
+          "ethics": {"min": 40, "max": 80}
+        }
+      },
+      "type": "positive"
+    },
+    {
+      "id": "emergency_iron",
+      "name": "急诊铁人",
+      "description": "你是急诊科的中流砥柱，永远冲在第一线。无论多么紧急的情况，你都能保持冷静。",
+      "condition": {
+        "multiResourceCondition": {
+          "energy": {"min": 70},
+          "safety": {"min": 60}
+        }
+      },
+      "type": "positive"
+    },
+    {
+      "id": "medical_accident",
+      "name": "医疗事故",
+      "description": "一次关键失误，让你明白医学容不得半点马虎。这个教训将伴随你一生，提醒你始终保持谨慎。",
+      "condition": {
+        "resourceCondition": {
+          "resource": "safety",
+          "value": 0,
+          "operator": "<="
+        }
+      },
+      "type": "negative"
+    },
+    {
+      "id": "exhausted",
+      "name": "精疲力竭",
+      "description": "过度劳累让你倒在了岗位上，健康同样重要。你需要学会平衡工作和生活，才能走得更远。",
+      "condition": {
+        "resourceCondition": {
+          "resource": "energy",
+          "value": 0,
+          "operator": "<="
+        }
+      },
+      "type": "negative"
+    },
+    {
+      "id": "moral_decline",
+      "name": "道德沦丧",
+      "description": "利益蒙蔽了初心，你已偏离医者本分。返回初心，重新找到医学的真谛，还为时不晚。",
+      "condition": {
+        "resourceCondition": {
+          "resource": "ethics",
+          "value": 0,
+          "operator": "<="
+        }
+      },
+      "type": "negative"
+    },
+    {
+      "id": "knowledge_crisis",
+      "name": "知识危机",
+      "description": "医学知识的匿乏让你在关键时刻无法作出正确判断。学无止境，医者需要终生学习。",
+      "condition": {
+        "resourceCondition": {
+          "resource": "knowledge",
+          "value": 0,
+          "operator": "<="
+        }
+      },
+      "type": "negative"
+    },
+    {
+      "id": "perfect_balance",
+      "name": "完美平衡",
+      "description": "你找到了医学生涯的完美平衡点。不仅保证了患者安全，也学到了扁实的知识，坚持了职业道德，同时保持了精力充沛。",
+      "condition": {
+        "specialCondition": "perfect_balance"
+      },
+      "type": "special"
+    },
+    {
+      "id": "hero_legend",
+      "name": "英雄救星",
+      "description": "你是急诊科的传奇，拯救无数生命。你的英勇和智慧在危急时刻总能创造奇迹，成为同事和患者心中的英雄。",
+      "condition": {
+        "specialCondition": "hero_legend"
+      },
+      "type": "special"
+    },
+    {
+      "id": "wise_doctor",
+      "name": "智慧医者",
+      "description": "你在医学道路上积累了深厚的知识和丰富的经验。你的诊断准确，治疗有效，深受同事和患者信任。",
+      "condition": {
+        "multiResourceCondition": {
+          "knowledge": {"min": 80},
+          "safety": {"min": 60, "max": 85}
+        }
+      },
+      "type": "positive"
+    },
+    {
+      "id": "compassionate_healer",
+      "name": "人文医者",
+      "description": "你不仅治疗患者的身体，更关心他们的心灵。你的同情心和沟通能力让患者在病痛中感受到温暖。",
+      "condition": {
+        "multiResourceCondition": {
+          "ethics": {"min": 80},
+          "safety": {"min": 50, "max": 80}
+        }
+      },
+      "type": "positive"
+    },
+    {
+      "id": "burnout_syndrome",
+      "name": "职业倦怠",
+      "description": "高强度的工作压力让你逐渐失去了对医学的热情。你需要重新找到工作的意义和价值。",
+      "condition": {
+        "multiResourceCondition": {
+          "energy": {"max": 20},
+          "ethics": {"max": 30}
+        }
+      },
+      "type": "negative"
+    },
+    {
+      "id": "steady_practitioner",
+      "name": "稳健医者",
+      "description": "你不求惊天动地，但求问心无愧。你的稳健和可靠让你成为团队中不可或缺的一员。",
+      "condition": {
+        "multiResourceCondition": {
+          "safety": {"min": 60, "max": 80},
+          "knowledge": {"min": 60, "max": 80},
+          "ethics": {"min": 60, "max": 80},
+          "energy": {"min": 40, "max": 70}
+        }
+      },
+      "type": "positive"
+    }
+  ],
+  "profession_tags": [
+    {
+      "id": "diagnostician",
+      "name": "诊断派",
+      "description": "擅长通过症状分析找出病因"
+    },
+    {
+      "id": "surgeon",
+      "name": "手术派",
+      "description": "在操作和治疗中表现出色"
+    },
+    {
+      "id": "academic",
+      "name": "学术派",
+      "description": "热衷于医学研究和知识探索"
+    },
+    {
+      "id": "empathetic",
+      "name": "共情派",
+      "description": "关注患者情感和心理需求"
+    },
+    {
+      "id": "procedural",
+      "name": "程序派",
+      "description": "严格遵守医疗规范和流程"
+    },
+    {
+      "id": "conservative",
+      "name": "保守稳健",
+      "description": "偏好低风险的安全方案"
+    },
+    {
+      "id": "risk_taker",
+      "name": "风险偏好",
+      "description": "愿意在关键时刻承担风险"
+    },
+    {
+      "id": "compliance_guardian",
+      "name": "合规卫士",
+      "description": "始终坚持道德和法律底线"
+    },
+    {
+      "id": "idealist",
+      "name": "理想主义者",
+      "description": "相信医学能改变世界"
+    },
+    {
+      "id": "realist",
+      "name": "现实主义者",
+      "description": "在现实约束下寻找最优解"
+    },
+    {
+      "id": "team_player",
+      "name": "团队协作者",
+      "description": "擅长与同事协作合作"
+    },
+    {
+      "id": "independent",
+      "name": "独立思考者",
+      "description": "喜欢独立分析和决策"
+    },
+    {
+      "id": "innovator",
+      "name": "创新者",
+      "description": "勇于尝试新方法和技术"
+    },
+    {
+      "id": "traditionalist",
+      "name": "传统主义者",
+      "description": "信任经过时间考验的方法"
+    },
+    {
+      "id": "crisis_manager",
+      "name": "危机管理者",
+      "description": "在紧急情况下表现出色"
+    }
+  ]
+}

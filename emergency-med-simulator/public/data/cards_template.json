@@ -1,0 +1,55 @@
+{
+  "regular_cards": [
+    {
+      "id": "ER_ChestPain_01",
+      "text": "中年男性突发胸痛，生命体征尚可。先做心电图还是先止痛？",
+      "character": "急诊值班医生",
+      "left": {
+        "label": "先做心电图",
+        "impact": {"safety": 8, "knowledge": 3, "energy": -2, "ethics": 1}
+      },
+      "right": {
+        "label": "先止痛",
+        "impact": {"safety": 3, "knowledge": 1, "energy": -1, "ethics": 0}
+      },
+      "timeCost": 2,
+      "category": "emergency",
+      "weight": 10
+    },
+    {
+      "id": "ER_Breathing_01",
+      "text": "老年女性呼吸困难，疑似急性肺水肿。家属要求立即输液。",
+      "character": "患者家属",
+      "left": {
+        "label": "先评估病情",
+        "impact": {"safety": 10, "knowledge": 5, "energy": -3, "ethics": 2}
+      },
+      "right": {
+        "label": "按家属要求输液",
+        "impact": {"safety": -5, "knowledge": -2, "energy": -1, "ethics": -8}
+      },
+      "timeCost": 2,
+      "category": "emergency",
+      "weight": 10
+    }
+  ],
+  "rare_cards": [
+    {
+      "id": "RARE_Hero_01",
+      "text": "深夜遇到车祸多发伤，你是现场唯一医护人员！",
+      "character": "急救调度",
+      "left": {
+        "label": "全力抢救",
+        "impact": {"safety": 15, "knowledge": 10, "energy": -12, "ethics": 8}
+      },
+      "right": {
+        "label": "呼叫支援",
+        "impact": {"safety": 8, "knowledge": 3, "energy": -5, "ethics": 3}
+      },
+      "timeCost": 3,
+      "rare": true,
+      "category": "emergency",
+      "weight": 2
+    }
+  ]
+}
